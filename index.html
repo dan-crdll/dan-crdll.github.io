@@ -1,57 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Buon Compleanno GPOWER 🎂</title>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Personale - Sviluppatore AI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f3f4f6;
+        }
+        header {
+            background: #008080; /* teal */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .about {
+            background: white;
+        }
+        .skills {
+            background: #e0f7fa;
+        }
+        .resume {
+            background: #ffffff;
+        }
+        .projects {
+            background: #e0f7fa;
+        }
+        .contacts {
+            background: #ffffff;
+        }
+        h2 {
+            color: #008080; /* teal */
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .skill-ring {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+        }
+        .skill-ring .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 10px solid #008080;
+            position: relative;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e0f7fa; /* Sfondo della sezione */
+        }
+        .skill-ring .circle span {
+            font-size: 18px;
+            font-weight: bold;
+            color: #008080;
+        }
+        .skill-ring .circle::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 10px solid #008080;
+            clip: rect(0, 100px, 100px, 50px);
+            transform: rotate(calc(3.6deg * var(--percentage)));
+        }
+        .skill-ring .circle::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 10px solid transparent;
+            clip: rect(0, 50px, 100px, 0);
+            border-right: 10px solid #008080;
+            border-top: 10px solid #008080;
+        }
+        .projects img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        .contacts .logos img {
+            width: 50px;
+            margin: 0 10px;
+        }
+        footer {
+            background: #008080; /* teal */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media (max-width: 768px) {
+            section {
+                padding: 20px 10px;
+            }
+            .skill-ring {
+                flex-direction: column;
+                text-align: center;
+            }
+            .skill-ring .circle {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portfolio Personale</h1>
+        <p>Sviluppatore AI</p>
+    </header>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
-      rel="stylesheet"
-    />
+    <section class="about">
+        <div class="container">
+            <h2>Chi Sono</h2>
+            <p>Mi chiamo [Nome] e sono uno sviluppatore AI con esperienza in [settori rilevanti]. Sono appassionato di creare soluzioni innovative utilizzando tecnologie avanzate.</p>
+        </div>
+    </section>
 
-    <link rel="stylesheet" href="style.css" />
-    <script src="./scroll.js" defer></script>
-  </head>
-  <body>
-    <div id="title" class="page">BUON COMPLEANNO GPOWER 🎂</div>
+    <section class="skills">
+        <div class="container">
+            <h2>Competenze</h2>
+            <div class="skill-ring">
+                <div class="circle" data-percentage="80" style="--percentage: 0.80;">
+                    <span>80%</span>
+                </div>
+                <p>Machine Learning - 80%</p>
+            </div>
+            <div class="skill-ring">
+                <div class="circle" data-percentage="90" style="--percentage: 0.90;">
+                    <span>90%</span>
+                </div>
+                <p>Deep Learning - 90%</p>
+            </div>
+            <div class="skill-ring">
+                <div class="circle" data-percentage="70" style="--percentage: 0.70;">
+                    <span>70%</span>
+                </div>
+                <p>Data Analysis - 70%</p>
+            </div>
+            <!-- Aggiungere altre competenze qui -->
+        </div>
+    </section>
 
-    <div id="first" class="page succ">
-      <img src="./img/cover.png" />
-    </div>
+    <section class="resume">
+        <div class="container">
+            <h2>Curriculum</h2>
+            <p>Scarica il mio <a href="link-al-tuo-cv.pdf" target="_blank">Curriculum Vitae</a>.</p>
+        </div>
+    </section>
 
-    <div class="page succ group">
-      <div class="sect">
-        <img src="./img/1.png" />
-      </div>
+    <section class="projects">
+        <div class="container">
+            <h2>Progetti</h2>
+            <div>
+                <a href="https://github.com/tuo-username/progetto1" target="_blank">
+                    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tuo-username&repo=progetto1" alt="Progetto 1">
+                </a>
+                <p>Descrizione del progetto 1</p>
+            </div>
+            <div>
+                <a href="https://github.com/tuo-username/progetto2" target="_blank">
+                    <img src="https://github-readme-stats.vercel.app/api/pin/?username=tuo-username&repo=progetto2" alt="Progetto 2">
+                </a>
+                <p>Descrizione del progetto 2</p>
+            </div>
+            <!-- Aggiungere altri progetti qui -->
+        </div>
+    </section>
 
-      <div class="sect">
-        <img src="./img/2.png" />
-      </div>
+    <section class="contacts">
+        <div class="container">
+            <h2>Contatti</h2>
+            <div class="logos">
+                <a href="https://github.com/tuo-username" target="_blank">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+                </a>
+                <a href="https://huggingface.co/tuo-username" target="_blank">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face">
+                </a>
+                <a href="https://www.linkedin.com/in/tuo-username" target="_blank">
+                    <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Logo.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </section>
 
-      <div class="sect">
-        <img src="./img/3.png" />
-      </div>
-    </div>
-
-    <div class="page succ group">
-      <div class="sect">
-        <img src="./img/4.png" />
-      </div>
-
-      <div class="sect">
-        <img src="./img/5.png" />
-      </div>
-
-      <div class="sect">
-        <img src="./img/6.png" />
-      </div>
-    </div>
-
-    <div class="page succ">
-      <img src="./img/7.png" />
-    </div>
-  </body>
+    <footer>
+        <p>&copy; 2024 [Il Tuo Nome]. Tutti i diritti riservati.</p>
+    </footer>
+</body>
 </html>
