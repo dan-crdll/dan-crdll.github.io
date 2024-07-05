@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Il Mio Portfolio - [Il Tuo Nome]</title>
     <style>
         :root {
             --light-bg: #ffffff;
@@ -31,7 +31,7 @@
             color: var(--dark-text);
         }
 
-        header {
+        header, footer {
             text-align: center;
             padding: 1rem;
         }
@@ -141,6 +141,34 @@
             border-radius: 10px;
         }
 
+        .contact {
+            text-align: center;
+        }
+
+        .contact-info {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            margin: 0 10px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            color: var(--light-primary);
+        }
+
+        .social-links img {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+
+        footer {
+            margin-top: 2rem;
+        }
+
         @media (max-width: 600px) {
             .project {
                 width: 90%;
@@ -150,7 +178,7 @@
 </head>
 <body class="light-mode">
     <header>
-        <h1>Il Mio Portfolio</h1>
+        <h1>Il Mio Portfolio - [Il Tuo Nome]</h1>
         <div class="theme-switch">
             <input type="checkbox" id="theme-toggle">
             <label for="theme-toggle" class="slider"></label>
@@ -204,6 +232,21 @@
             </div>
         </div>
     </section>
+    <section id="contact">
+        <h2>Contatti</h2>
+        <div class="contact-info">
+            <p>Email: <a href="mailto:tuoemail@example.com">tuoemail@example.com</a></p>
+            <p>Telefono: <a href="tel:+391234567890">+39 123 456 7890</a></p>
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/tuoaccount" target="_blank"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="GitHub"></a>
+            <a href="https://huggingface.co/tuoaccount" target="_blank"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="HuggingFace"></a>
+            <a href="https://www.linkedin.com/in/tuoaccount" target="_blank"><img src="https://image.flaticon.com/icons/png/512/174/174857.png" alt="LinkedIn"></a>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 [Il Tuo Nome]. Tutti i diritti riservati.</p>
+    </footer>
     <script>
         const themeToggle = document.getElementById('theme-toggle');
         const body = document.body;
