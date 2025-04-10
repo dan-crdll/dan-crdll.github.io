@@ -109,6 +109,10 @@ footer {
     width: 100%;
     text-align: center;
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
 }
 
 #contacts {
