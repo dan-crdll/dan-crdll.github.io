@@ -1,265 +1,169 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Mio Portfolio - [Il Tuo Nome]</title>
-    <style>
-        :root {
-            --light-bg: #ffffff;
-            --light-text: #000000;
-            --light-primary: #008080;
-            --dark-bg: #001f3f;
-            --dark-text: #ffffff;
-            --dark-primary: #ff851b;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .light-mode {
-            background: var(--light-bg);
-            color: var(--light-text);
-        }
-
-        .dark-mode {
-            background: var(--dark-bg);
-            color: var(--dark-text);
-        }
-
-        header, footer {
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .theme-switch {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 1rem;
-        }
-
-        .theme-switch input {
-            display: none;
-        }
-
-        .slider {
-            position: relative;
-            width: 50px;
-            height: 25px;
-            background: var(--light-primary);
-            border-radius: 25px;
-            cursor: pointer;
-        }
-
-        .slider::before {
-            content: '';
-            position: absolute;
-            top: 2px;
-            left: 2px;
-            width: 21px;
-            height: 21px;
-            background: #ffffff;
-            border-radius: 50%;
-            transition: transform 0.3s;
-        }
-
-        input:checked + .slider::before {
-            transform: translateX(25px);
-        }
-
-        input:checked + .slider {
-            background: var(--dark-primary);
-        }
-
-        section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        .skills {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .skill {
-            width: 100%;
-            margin: 0.5rem 0;
-        }
-
-        .skill-name {
-            margin-bottom: 0.2rem;
-        }
-
-        .skill-bar {
-            width: 100%;
-            background: #ddd;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .skill-percentage {
-            height: 20px;
-            text-align: center;
-            line-height: 20px;
-            color: white;
-            border-radius: 10px;
-        }
-
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .project {
-            width: 45%;
-            margin: 1rem;
-            padding: 1rem;
-            background: #f4f4f4;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .project:hover {
-            transform: scale(1.05);
-        }
-
-        .project img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-        .contact {
-            text-align: center;
-        }
-
-        .contact-info {
-            margin: 1rem 0;
-        }
-
-        .social-links a {
-            margin: 0 10px;
-            color: inherit;
-            text-decoration: none;
-        }
-
-        .social-links a:hover {
-            color: var(--light-primary);
-        }
-
-        .social-links img {
-            width: 24px;
-            height: 24px;
-            vertical-align: middle;
-        }
-
-        footer {
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 600px) {
-            .project {
-                width: 90%;
-            }
-        }
-    </style>
+    <title>Daniele S. Cardullo</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="light-mode">
-    <header>
-        <h1>Il Mio Portfolio - [Il Tuo Nome]</h1>
-        <div class="theme-switch">
-            <input type="checkbox" id="theme-toggle">
-            <label for="theme-toggle" class="slider"></label>
-        </div>
-    </header>
-    <section id="curriculum">
-        <h2>Curriculum</h2>
-        <p>Inserisci qui il tuo curriculum vitae...</p>
-    </section>
-    <section id="skills">
-        <h2>Competenze</h2>
-        <div class="skills">
-            <div class="skill">
-                <div class="skill-name">HTML</div>
-                <div class="skill-bar">
-                    <div class="skill-percentage" style="width: 90%; background: var(--light-primary);">90%</div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">CSS</div>
-                <div class="skill-bar">
-                    <div class="skill-percentage" style="width: 80%; background: var(--light-primary);">80%</div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">JavaScript</div>
-                <div class="skill-bar">
-                    <div class="skill-percentage" style="width: 75%; background: var(--light-primary);">75%</div>
-                </div>
-            </div>
-            <div class="skill">
-                <div class="skill-name">Python</div>
-                <div class="skill-bar">
-                    <div class="skill-percentage" style="width: 85%; background: var(--light-primary);">85%</div>
-                </div>
+<body>
+    <div id="intro">
+        <div class="left">
+            <h1>
+                Ciao 👋 <br>
+                I am Daniele!
+            </h1>
+            <h3>
+                📍 Rome, Italy 
+            </h3>
+            <p>
+                I am a <em>computer engineer</em> and <em>AI developer</em>.
+            </p>
+            <div id="contacts">
+                <a href="https://github.com/dan-crdll" target="_blank">
+                    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
+                </a>
+                <a href="https://huggingface.co/osusume" target="_blank">
+                    <img class="logo" src="https://huggingface.co/datasets/huggingface/brand-assets/resolve/main/hf-logo.svg" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/daniele-s-cardullo-014a7a170/" target="_blank">
+                    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/3991/3991775.png" alt="">
+                </a>
+                <a href="mailto:danielecardullo.drive@gmail.com" target="_blank">
+                    <img class="logo" src="https://cdn-icons-png.flaticon.com/512/666/666162.png" alt="">
+                </a>
             </div>
         </div>
-    </section>
-    <section id="projects">
-        <h2>Progetti</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>Progetto 1</h3>
-                <img src="https://via.placeholder.com/150" alt="Progetto 1">
-                <p>Descrizione del progetto 1. <a href="https://github.com/tuoaccount/progetto1">Visualizza su GitHub</a></p>
-            </div>
-            <div class="project">
-                <h3>Progetto 2</h3>
-                <img src="https://via.placeholder.com/150" alt="Progetto 2">
-                <p>Descrizione del progetto 2. <a href="https://github.com/tuoaccount/progetto2">Visualizza su GitHub</a></p>
-            </div>
+        <div class="right">
+            <img src="https://avatars.githubusercontent.com/u/124797958?v=4" alt="">
         </div>
-    </section>
-    <section id="contact">
-        <h2>Contatti</h2>
-        <div class="contact-info">
-            <p>Email: <a href="mailto:tuoemail@example.com">tuoemail@example.com</a></p>
-            <p>Telefono: <a href="tel:+391234567890">+39 123 456 7890</a></p>
-        </div>
-        <div class="social-links">
-            <a href="https://github.com/tuoaccount" target="_blank"><img src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="GitHub"></a>
-            <a href="https://huggingface.co/tuoaccount" target="_blank"><img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="HuggingFace"></a>
-            <a href="https://www.linkedin.com/in/tuoaccount" target="_blank"><img src="https://image.flaticon.com/icons/png/512/174/174857.png" alt="LinkedIn"></a>
-        </div>
-    </section>
-    <footer>
-        <p>&copy; 2024 [Il Tuo Nome]. Tutti i diritti riservati.</p>
-    </footer>
-    <script>
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
+    </div>
+    I’m particularly interested in deepfake detection, generative models, and human-robot interaction.
+    <br>
+    I'm currently working on <em>Multimodal Deepfake Detection</em>, and <em>Robot Interaction</em>. 🤖
+    <hr>
 
-        themeToggle.addEventListener('change', () => {
-            if (themeToggle.checked) {
-                body.classList.remove('light-mode');
-                body.classList.add('dark-mode');
-            } else {
-                body.classList.remove('dark-mode');
-                body.classList.add('light-mode');
-            }
-        });
-    </script>
+    <h2>
+        Project Selection 🍷
+    </h2>
+    <div id="projects">
+        <div class="project_card">
+            <h3>
+                Ground to Aerial Image Translation 🌍
+            </h3>
+            
+                Implementation of a latent diffusion model to generate satellite views from ground views in the CVPR dataset.
+            
+            <div class="tags">
+                <div class="tag">
+                    Diffusion Model
+                </div>
+                <div class="tag">
+                    Patch Autoencoder
+                </div>
+                <div class="tag">
+                    Transformer
+                </div>
+            </div>
+            <a href="https://github.com/dan-crdll/ground_aerial_project" target="_blank">
+                <img class="logo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
+            </a>
+        </div>
+        
+        <div class="project_card">
+            <h3>
+                Reimplementation of "DreamDiffusion" 💭
+            </h3>
+            
+                Re-implementation of the method proposed in ''DreamDiffusion: Generating High-Quality Images from Brain EEG Signals'' by Y. Bai, X. Wang et al.
+            
+            <div class="tags">
+                <div class="tag">
+                    Diffusion Model
+                </div>
+                <div class="tag">
+                    Masked Autoencoder
+                </div>
+                <div class="tag">
+                    Transformer
+                </div>
+                <div class="tag">
+                    Human-Computer Interface
+                </div>
+            </div>
+            <a href="https://github.com/dan-crdll/nn_project_dreamdiffusion" target="_blank">
+                <img class="logo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
+            </a>
+        </div>
+
+        <div class="project_card">
+            <h3>
+                Language Inference on FEVER 💡
+            </h3>
+            
+                Natural Language Inference task on adversarial FEVER dataset.
+            
+            <div class="tags">
+                <div class="tag">
+                    BERT
+                </div>
+                <div class="tag">
+                    Natural Language Processing
+                </div>
+                <div class="tag">
+                    NLI
+                </div>
+                <div class="tag">
+                    Data Augmentation
+                </div>
+                <div class="tag">
+                    Adversarial Data
+                </div>
+            </div>
+            <a href="https://github.com/dan-crdll/nli_adversarial_FEVER" target="_blank">
+                <img class="logo" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
+            </a>
+        </div>
+
+        <br>
+        <a href="https://github.com/dan-crdll?tab=repositories" class="tab" target="_blank">
+            <div >
+                To browse all my public repos just click here! 👀
+            </div>
+        </a>
+    </div>
+
+    <h2>
+        Skills 🦾
+    </h2>
+    <div id="skills">
+        <div class="skill_card">
+            <h3>🐍 Python Programming</h3>
+            <p>
+            I am proficient in Python programming, utilizing it for a wide range of applications including data analysis, machine learning, and computer vision. My expertise includes libraries such as <strong>NumPy</strong>, <strong>Pandas</strong>, and <strong>OpenCV</strong>, which I use to process data and build efficient solutions.
+            </p>
+        </div>
+
+        <div class="skill_card">
+            <h3>🔥 PyTorch Development</h3>
+            <p>
+            I specialize in developing machine learning models using <strong>PyTorch</strong>. My work involves creating and training deep learning models for tasks such as image processing, natural language processing, and generative modeling.
+            </p>
+        </div>
+
+        <div class="skill_card">
+            <h3>🎮 Game Development in Unity 3D</h3>
+            <p>
+            I have experience in game development using <strong>Unity 3D</strong>. I have worked on designing and implementing interactive and engaging games, leveraging Unity's powerful tools and scripting capabilities.
+            </p>
+        </div>
+
+        <div class="skill_card">
+            <h3>🤖 Learning ROS</h3>
+            <p>
+            I am currently learning <strong>Robot Operating System (ROS)</strong>, focusing on building robotic applications and enhancing my understanding of human-robot interaction.
+            </p>
+        </div>
+    </div>
 </body>
 </html>
