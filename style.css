@@ -105,6 +105,12 @@ hr {
     background-color: rgba(0, 0, 128, 0.15);
 }
 
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
 #contacts {
     display: flex;
     justify-content: flex-start;
@@ -125,9 +131,9 @@ em {
 }
 
 #skills {
-
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
 }
