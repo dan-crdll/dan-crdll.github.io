@@ -142,3 +142,77 @@ em {
 .skill img {
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    body {
+        margin: 5% 10%;
+    }
+
+    #intro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #intro .left{
+        width: 100%;
+    }
+
+    #intro .right {
+        width: 50%;
+    }
+
+    #intro img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    #projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project_card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .tags {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tag {
+        margin: 5px 0;
+    }
+
+    .logo {
+        width: 15%;
+    }
+
+    .tab {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #contacts {
+        justify-content: center;
+    }
+
+    #contacts a {
+        margin-right: 10px;
+    }
+
+    #skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 20%;
+        margin: 10px 0;
+    }
+}
